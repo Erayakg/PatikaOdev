@@ -1,0 +1,28 @@
+//tablo oluşturma
+
+CREATE TABLE employee (
+    id INTEGER PRIMARY KEY,
+    name VARCHAR(50),
+    birthday DATE,
+    email VARCHAR(100)
+);
+
+//veri ekleme
+
+INSERT INTO employee (id, name, birthday, email) VALUES (1, 'Eray', '2002-25-04', 'akg@gmail.com');
+
+//güncelleme
+
+UPDATE employee SET name = 'Ali' WHERE id = 1;
+UPDATE employee SET birthday = '2003-12-02' WHERE name = 'Eray';
+UPDATE employee SET email = 'ornek@ornek.com' WHERE birthday = '2003-12-02';
+UPDATE employee SET id = 2 WHERE email = 'ornek@ornek.com';
+UPDATE employee SET name = 'Ali Eray ' WHERE id = 2;
+
+//silme
+
+DELETE FROM employee WHERE id = 1;
+DELETE FROM employee WHERE name = 'Ali Eray';
+DELETE FROM employee WHERE birthday = '2003-12-02';
+DELETE FROM employee WHERE email = 'ornek@ornek.com';
+DELETE FROM employee WHERE id = 2;
